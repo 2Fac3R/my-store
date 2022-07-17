@@ -1,7 +1,7 @@
 {
   "name": "my-store",
   "version": "1.0.0",
-  "description": "Learning Express",
+  "description": "Simple API CRUD in Node/Express using MongoDB",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
