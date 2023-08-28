@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
       offset
     });
   } else {
-    res.send('No hay parametros');
+    res.send('No params found.');
   }
 });
 

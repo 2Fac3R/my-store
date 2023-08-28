@@ -1,6 +1,7 @@
 const express = require('express');
 
-const ProductsService = require('../services/product.service');
+const ProductsService = require('../services/local.product.service');  // local, with arrays
+// const ProductsService = require('../services/product.service');  // connects to mongodb cloud
 const validatorHandler = require('../middlewares/validator.handler');
 const {
   createProductSchema,
@@ -38,7 +39,7 @@ router.get('/:id',
 
 router.post('/',
   validatorHandler(createProductSchema, 'body'),
-  async (req, res) => {
+  async (req, res, next) => {
     try {
       const body = req.body;
       const newProduct = await service.create(body);

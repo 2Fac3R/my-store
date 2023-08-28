@@ -2,7 +2,6 @@ const express = require('express');
 const routerApi = require('./routes');
 
 const {
-  logErrors,
   errorHandler,
   boomErrorHandler
 } = require('./middlewares/error.handler');
@@ -14,7 +13,6 @@ app.use(express.json());
 
 routerApi(app);
 
-app.use(logErrors);
 app.use(boomErrorHandler);
 app.use(errorHandler);
 
@@ -23,5 +21,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log('Mi port' + port);
+  console.log('Server running -> localhost:' + port);
 });
