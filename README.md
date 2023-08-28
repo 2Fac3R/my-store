@@ -10,10 +10,10 @@ Edit and rename .env.example with your own settings
 
 If you do not have a mongodb cloud account or just want to test the api locally, make sure you have enabled it in products.router.js file:
 
-    ```js
-    const ProductsService = require('../services/local.product.service');  // local, with arrays
-    // const ProductsService = require('../services/product.service');  // connects to mongodb cloud
-    ```
+```js
+const ProductsService = require('../services/local.product.service');  // local, with arrays
+// const ProductsService = require('../services/product.service');  // connects to mongodb cloud
+```
 
 ## Usage
 
